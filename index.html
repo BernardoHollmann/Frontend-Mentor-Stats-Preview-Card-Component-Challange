@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap'); 
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      background-color: hsl(233, 47%, 7%);
+      font-size: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .main{
+      background-color: hsl(244, 38%, 16%);
+      margin: 0 auto;
+      display: flex;
+      border-radius: 15px;
+      overflow: hidden; 
+    }
+
+    .content{
+      width: 581px;
+      padding: 3% 0 3% 3%;
+    }
+
+    .header{
+      font-family: 'Inter', sans-serif;
+      width: 75%;
+      font-size: 1.3em;
+      padding: 5px 0px 5px 15px;
+    }
+
+    .header span{
+      color: hsl(277, 64%, 61%);
+    }
+
+    .header h1{
+      color: #fff;
+    }
+
+    .description{
+      font-family: 'Lexend Deca', sans-serif;
+      width: 72%;
+      line-height: 25px;
+      margin: 30px 0px 50px 0px;
+      padding: 5px 15px 5px 15px;
+      color: hsla(0, 0%, 100%, 0.6);
+    }
+
+    .marks{
+      display: flex;
+      justify-content: space-between;
+      margin-right: 180px;
+      padding-left: 15px;
+    }
+
+    .marks h4{
+      font-family: 'Inter', sans-serif;
+      font-size: 1.3em;
+      color: #fff;
+      font-weight: 700;
+      padding-bottom: 5px;
+    }
+
+    .marks p{
+      font-family: 'Lexend Deca', sans-serif;
+      font-size: 0.8em;
+      font-weight: 400;
+      color: hsla(0, 0%, 100%, 0.6);
+      text-transform: uppercase;
+    }
+
+    .color-overlay {
+      width: 100%;
+      height: 100%;
+      background-color: hsl(277, 64%, 61%, 0.6);
+      position: absolute;
+    }
+
+    .image-container{
+      display: flex;
+      position: relative;
+    }
+
+    .image img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media only screen and (max-width: 1150px) and (min-width: 426px) {
+      body {
+        font-size: 14px;
+      }
+
+      .marks h4{
+        padding-right: 10px;
+      }
+
+      .marks p{
+        padding-right: 10px;
+      }
+
+      .content{
+        width: 500px;
+      }
+
+    }
+
+    @media only screen and (max-width: 425px) {
+      body{
+      font-size: 12px;
+    }
+
+    .main{
+      border: 1px solid green;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .content{
+      border: 1px solid yellow;
+      align-self: center;
+      order: 1;
+      width: 100%;
+    }
+
+    .image-container{
+      order: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .header {
+      width: 100%;
+      padding: 15px;
+    }
+
+    .description{
+      font-family: 'Lexend Deca', sans-serif;
+      width: 100%;
+      color: hsla(0, 0%, 100%, 0.6);
+    }
+
+    .marks{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: 0;
+    }
+
+    .marks div{
+      margin-bottom: 30px;
+    }
+
+  }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="main">
+    <div class="content">
+      <div class="header">
+        <h1>Get <span>insights</span> that help your business grow.</h1>
+      </div>
+      <div class="description">
+        <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
+      </div>
+      <div class="marks">
+        <div>
+          <h4>10k+</h4>
+          <p>companies</p>
+        </div>
+        <div>
+          <h4>314</h4>
+          <p>templates</p>
+        </div>
+        <div>
+          <h4>12m+</h4>
+          <p>queries</p> 
+        </div>
+      </div>
+    </div>
+    <div class="image-container">
+      <div class="image">
+        <img src="./images/image-header-desktop.jpg" alt="">
+      </div>
+      <div class="color-overlay"></div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
